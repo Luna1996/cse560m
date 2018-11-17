@@ -6,13 +6,13 @@ d2 = [4, 8, 16, 32, 64, 128, 256]
 for a1 in d1:
   for a2 in d2:
     for a3 in d2:
-      savedir = '"d%dx%dx%d"'%(a1,a2,a3)
+      savedir = 'd%dx%dx%d'%(a1,a2,a3)
       print(savedir,'start')
       subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
       '--outdir=%s'%(savedir),\
       'hw3config.py',\
       '-c','/project/linuxlab/gem5/test_progs/daxpy/daxpy_arm_big',\
-      '--cpu-type="DerivO3CPU"',\
+      '--cpu-type=DerivO3CPU',\
       '--caches','--l2cache',\
       '--num-phys-float-regs=%d'%(a1),\
       '--num-rob-entries=%d'%(a2),\
