@@ -14,4 +14,4 @@ def set_config(cpu_list, options):
   for cpu in cpu_list:
     cpu.numROBEntries = options.num_rob_entries
     cpu.numIQEntries = options.num_iq_entries
-    cpu.numPhysFloatRegs = options.num_phys_float_entries
+    cpu.numPhysFloatRegs = options.num_phys_float_regs
