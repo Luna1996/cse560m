@@ -3,8 +3,6 @@ import subprocess
 d1 = [256, 512, 1024, 2048, 4096]
 d2 = [4, 8, 16, 32, 64, 128, 256]
 
-savedir
-
 for a1 in d1:
   for a2 in d2:
     for a3 in d2:
