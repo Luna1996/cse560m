@@ -4,8 +4,6 @@ from textwrap import TextWrapper
 
 # add options
 def addHW4Opts(parser):
-  parser.add_option("--l1i_size", type="str", default="64KB")
-  parser.add_option("--l1d_size", type="str", default="64KB")
   parser.add_option("--pipeline_width", type="int", default=8)
   parser.add_option("--branch_pred", type="str", default="LTAGE")
 
