@@ -1,6 +1,6 @@
 import subprocess
 
-d1 = ['8KB', '16KB', '32KB', '64KB']
+d1 = ['8 KB', '16KB', '32KB', '64KB']
 d2 = [8, 16]
 d3 = [
     'O3_ARM_v7a_3', 'AtomicSimpleCPU', 'ex5_big', 'DerivO3CPU', 'MinorCPU',
