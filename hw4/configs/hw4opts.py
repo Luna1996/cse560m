@@ -1,10 +1,17 @@
 from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
+import common import BPConfig
 
 # add options
 def addHW4Opts(parser):
   parser.add_option("--pipeline_width", type="int", default=8)
+  parser.add_option("--bp-type", type="choice", default=None,
+                      choices=BPConfig.bp_names(),
+                      help = """
+                      type of branch predictor to run with
+                      (if not set, use the default branch predictor of
+                      the selected CPU)""")
 
 # set parameters taken in from options on command line
 def set_config(cpu_list, options):
@@ -17,3 +24,4 @@ def set_config(cpu_list, options):
     cpu.wbWidth = options.pipeline_width
     cpu.commitWidth = options.pipeline_width
     cpu.squashWidth = options.pipeline_width
+    cpu.branchPred = BPConfig.get(options.bp_type)
