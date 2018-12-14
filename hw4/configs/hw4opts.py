@@ -2,6 +2,7 @@ from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
 from m5.util import addToPath
+import os
 gem5_path = os.environ["GEM5"]
 addToPath(gem5_path + '/configs')
 from common import BPConfig
