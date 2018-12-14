@@ -5,7 +5,6 @@ from textwrap import TextWrapper
 # add options
 def addHW4Opts(parser):
   parser.add_option("--pipeline_width", type="int", default=8)
-  parser.add_option("--branch_pred", type="str", default="LTAGE")
 
 # set parameters taken in from options on command line
 def set_config(cpu_list, options):
@@ -18,4 +17,3 @@ def set_config(cpu_list, options):
     cpu.wbWidth = options.pipeline_width
     cpu.commitWidth = options.pipeline_width
     cpu.squashWidth = options.pipeline_width
-    cpu.branchPred = options.branch_pred
