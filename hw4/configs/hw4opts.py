@@ -1,7 +1,7 @@
 from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
-import common import BPConfig
+from common import BPConfig
 
 # add options
 def addHW4Opts(parser):
