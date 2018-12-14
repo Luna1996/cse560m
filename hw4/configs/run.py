@@ -1,6 +1,6 @@
 import subprocess
 
-d1 = [8, 16, 32, 64]
+d1 = ['8KB', '16KB', '32KB', '64KB']
 d2 = [8, 16]
 d3 = [
     'O3_ARM_v7a_3', 'AtomicSimpleCPU', 'ex5_big', 'DerivO3CPU', 'MinorCPU',
@@ -14,8 +14,8 @@ for a in range(4):
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
   '--outdir=%s'%(savedir),\
   'hw4config.py',\
-  '--l1d_size=%dKB'%(d1[a]),\
-  '--l1i_size=%dKB'%(d1[a]),\
+  '--l1d_size=%s'%(d1[a]),\
+  '--l1i_size=%s'%(d1[a]),\
   '--pipeline_width=8',\
   '--cpu-type=DerivO3CPU',\
   '--bp-type=LTAGE',\
