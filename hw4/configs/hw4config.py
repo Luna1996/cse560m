@@ -161,11 +161,6 @@ system = System(cpu = [CPUClass(cpu_id=i) for i in xrange(np)],
                 mem_ranges = [AddrRange(options.mem_size)],
                 cache_line_size = options.cacheline_size)
 
-if options.branch_pred is "LTAGE":
-  for cpu in system.cpu:
-    cpu.branchPred == "LTAGE"
-
-
 hw4opts.set_config(system.cpu, options)
 #if numThreads > 1:
 #    system.multi_thread = True
