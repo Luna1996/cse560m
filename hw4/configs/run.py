@@ -20,7 +20,7 @@ for a in range(4):
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir,'done')
 
-  for a in range(2):
+for a in range(2):
   savedir = 'd2x%d'%(a)
   print(savedir,'start')
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
@@ -35,7 +35,7 @@ for a in range(4):
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir,'done')
   
-  for a in range(9):
+for a in range(9):
   savedir = 'd3x%d'%(a)
   print(savedir,'start')
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
@@ -50,7 +50,7 @@ for a in range(4):
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir,'done')
 
-  for a in range(5):
+for a in range(5):
   savedir = 'd4x%d'%(a)
   print(savedir,'start')
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
