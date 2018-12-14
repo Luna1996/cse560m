@@ -18,7 +18,7 @@ for a in range(4):
   '--l1i_size=%dKB'%(d1[a]),\
   '--pipeline_width=8',\
   '--cpu-type=DerivO3CPU',\
-  '--branch_pred=LTAGE',\
+  '--bp-type=LTAGE',\
   '--caches','--l2cache',\
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir, 'done')
@@ -33,7 +33,7 @@ for a in range(2):
   '--l1i_size=64KB',\
   '--pipeline_width=%d'%(d2[a]),\
   '--cpu-type=DerivO3CPU',\
-  '--branch_pred=LTAGE',\
+  '--bp-type=LTAGE',\
   '--caches','--l2cache',\
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir, 'done')
@@ -48,7 +48,7 @@ for a in range(9):
   '--l1i_size=64KB',\
   '--pipeline_width=8',\
   '--cpu-type=%s'%(d3[a]),\
-  '--branch_pred=LTAGE',\
+  '--bp-type=LTAGE',\
   '--caches','--l2cache',\
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir, 'done')
@@ -63,7 +63,7 @@ for a in range(5):
   '--l1i_size=64KB',\
   '--pipeline_width=8',\
   '--cpu-type=DerivO3CPU',\
-  '--branch_pred=%s'%(d4[a]),\
+  '--bp-type=%s'%(d4[a]),\
   '--caches','--l2cache',\
   '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
   print(savedir, 'done')
