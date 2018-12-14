@@ -1,6 +1,10 @@
 from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
+from m5.util import addToPath
+gem5_path = os.environ["GEM5"]
+addToPath(gem5_path + '/configs')
+from common import BPConfig
 
 # add options
 def addHW4Opts(parser):
@@ -23,3 +27,4 @@ def set_config(cpu_list, options):
     cpu.wbWidth = options.pipeline_width
     cpu.commitWidth = options.pipeline_width
     cpu.squashWidth = options.pipeline_width
+    cpu.branchPred = BPConfig.get(options.bp_type)
