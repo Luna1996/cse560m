@@ -62,6 +62,7 @@ from common import Simulation
 from common import CacheConfig
 from common import CpuConfig
 from common import MemConfig
+from common import BPConfig
 from common.Caches import *
 from common.cpu2000 import *
 import hw4opts
