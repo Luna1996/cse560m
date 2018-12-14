@@ -1,6 +1,7 @@
 from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
+from m5.params import *
 
 # add options
 def addHW4Opts(parser):
