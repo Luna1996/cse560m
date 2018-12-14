@@ -1,7 +1,6 @@
 from m5 import fatal
 import m5.objects
 from textwrap import TextWrapper
-from m5.params import *
 
 # add options
 def addHW4Opts(parser):
@@ -11,12 +10,12 @@ def addHW4Opts(parser):
 # set parameters taken in from options on command line
 def set_config(cpu_list, options):
   for cpu in cpu_list:
-    cpu.fetchWidth = Param.Unsigned(options.pipeline_width, "Fetch width")
-    cpu.decodeWidth = Param.Unsigned(options.pipeline_width, "Decode width")
-    cpu.renameWidth = Param.Unsigned(options.pipeline_width, "Rename width")
-    cpu.dispatchWidth = Param.Unsigned(options.pipeline_width, "Dispatch width")
-    cpu.issueWidth = Param.Unsigned(options.pipeline_width, "Issue width")
-    cpu.wbWidth = Param.Unsigned(options.pipeline_width, "Writeback width")
-    cpu.commitWidth = Param.Unsigned(options.pipeline_width, "Commit width")
-    cpu.squashWidth = Param.Unsigned(options.pipeline_width, "Squash width")
+    cpu.fetchWidth = options.pipeline_width
+    cpu.decodeWidth = options.pipeline_width
+    cpu.renameWidth = options.pipeline_width
+    cpu.dispatchWidth = options.pipeline_width
+    cpu.issueWidth = options.pipeline_width
+    cpu.wbWidth = options.pipeline_width
+    cpu.commitWidth = options.pipeline_width
+    cpu.squashWidth = options.pipeline_width
     cpu.branchPred = options.branch_pred
