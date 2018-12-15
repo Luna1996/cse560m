@@ -2,7 +2,7 @@ import os
 import m5
 from m5.util import addToPath
 addToPath(os.environ["GEM5"] + '/src/cpu/pred')
-from BranchPredictor import *
+import BranchPredictor
 
 BP = [LocalBP,TournamentBP,BiModeBP,TAGE,LTAGE]
 
