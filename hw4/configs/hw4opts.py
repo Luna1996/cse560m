@@ -6,11 +6,19 @@ def addHW4Opts(parser):
 # set parameters taken in from options on command line
 def set_config(cpu_list, options):
   for cpu in cpu_list:
-    cpu.fetchWidth = options.pipeline_width
-    cpu.decodeWidth = options.pipeline_width
-    cpu.renameWidth = options.pipeline_width
-    cpu.dispatchWidth = options.pipeline_width
-    cpu.issueWidth = options.pipeline_width
-    cpu.wbWidth = options.pipeline_width
-    cpu.commitWidth = options.pipeline_width
-    cpu.squashWidth = options.pipeline_width
+    if cpu.fetchWidth:
+      cpu.fetchWidth = options.pipeline_width
+    if cpu.decodeWidth:
+      cpu.decodeWidth = options.pipeline_width
+    if cpu.renameWidth:
+      cpu.renameWidth = options.pipeline_width
+    if cpu.dispatchWidth:
+      cpu.dispatchWidth = options.pipeline_width
+    if cpu.issueWidth:
+      cpu.issueWidth = options.pipeline_width
+    if cpu.wbWidth:
+      cpu.wbWidth = options.pipeline_width
+    if cpu.commitWidth:
+      cpu.commitWidth = options.pipeline_width
+    if cpu.squashWidth:
+      cpu.squashWidth = options.pipeline_width
