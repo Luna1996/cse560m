@@ -29,8 +29,8 @@ for a in range(2):
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
   '--outdir=%s'%(savedir),\
   'hw4config.py',\
-  '--l1d_size=64KB',\
-  '--l1i_size=64KB',\
+  '--l1d_size=64kB',\
+  '--l1i_size=64kB',\
   '--pipeline_width=%d'%(d2[a]),\
   '--cpu-type=DerivO3CPU',\
   '--bp-type=LTAGE',\
@@ -44,8 +44,8 @@ for a in range(9):
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
   '--outdir=%s'%(savedir),\
   'hw4config.py',\
-  '--l1d_size=64KB',\
-  '--l1i_size=64KB',\
+  '--l1d_size=64kB',\
+  '--l1i_size=64kB',\
   '--pipeline_width=8',\
   '--cpu-type=%s'%(d3[a]),\
   '--bp-type=LTAGE',\
@@ -59,8 +59,8 @@ for a in range(5):
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
   '--outdir=%s'%(savedir),\
   'hw4config.py',\
-  '--l1d_size=64KB',\
-  '--l1i_size=64KB',\
+  '--l1d_size=64kB',\
+  '--l1i_size=64kB',\
   '--pipeline_width=8',\
   '--cpu-type=DerivO3CPU',\
   '--bp-type=%s'%(d4[a]),\
