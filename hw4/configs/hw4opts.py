@@ -1,3 +1,11 @@
+import os
+import m5
+from m5.util import addToPath
+addToPath(os.environ["GEM5"] + '/src/cpu/pred')
+from BranchPredictor import *
+
+BP = [LocalBP,TournamentBP,BiModeBP,TAGE,LTAGE]
+
 # add options
 def addHW4Opts(parser):
   parser.add_option("--pipeline_width", type="int", default=8)
