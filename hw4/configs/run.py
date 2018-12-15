@@ -6,7 +6,7 @@ d3 = [
     'O3_ARM_v7a_3', 'AtomicSimpleCPU', 'ex5_big', 'DerivO3CPU', 'MinorCPU',
     'HPI', 'ex5_LITTLE', 'NonCachingSimpleCPU', 'TimingSimpleCPU'
 ]
-d4 = ['LocalBP', 'TournamentBP', 'BiModeBP', 'TAGE', 'LTAGE']
+d4 = ['Fuck','LocalBP', 'TournamentBP', 'BiModeBP', 'TAGE', 'LTAGE']
 
 # for a in range(4):
 #   savedir = 'd1x%d' % (a)
