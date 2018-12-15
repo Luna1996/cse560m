@@ -1,7 +1,7 @@
 import os
 import m5
 from m5.util import addToPath
-addToPath(os.environ["GEM5"] + '/src/cpu')
+addToPath(os.environ["GEM5"] + '/src/cpu/')
 from pred import *
 
 BP = [LocalBP,TournamentBP,BiModeBP,TAGE,LTAGE]
