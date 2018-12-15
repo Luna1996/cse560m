@@ -1,3 +1,11 @@
+import os
+import m5
+from m5.util import addToPath
+addToPath(os.environ["GEM5"] + '/src/cpu')
+from pred import *
+
+BP = [LocalBP,TournamentBP,BiModeBP,TAGE,LTAGE]
+
 # add options
 def addHW4Opts(parser):
   parser.add_option("--pipeline_width", type="int", default=8)
@@ -23,4 +31,3 @@ def set_config(cpu_list, options):
       cpu.commitWidth = options.pipeline_width
     if hasattr(cpu, 'squashWidth'):
       cpu.squashWidth = options.pipeline_width
-    cpu.branchPred == options.bp_type
