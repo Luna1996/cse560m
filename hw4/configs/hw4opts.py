@@ -23,4 +23,4 @@ def set_config(cpu_list, options):
       cpu.commitWidth = options.pipeline_width
     if hasattr(cpu, 'squashWidth'):
       cpu.squashWidth = options.pipeline_width
-    cpu.branchPred == options.bp_type
+    cpu.branchPred.type = options.bp_type
