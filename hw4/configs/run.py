@@ -1,14 +1,14 @@
 import subprocess
 
 d1 = ['8kB', '16kB', '32kB', '64kB']
-d2 = [8, 16]
+d2 = [1,2,4,8]
 d3 = [
     'O3_ARM_v7a_3', 'AtomicSimpleCPU', 'ex5_big', 'DerivO3CPU', 'MinorCPU',
     'HPI', 'ex5_LITTLE', 'NonCachingSimpleCPU', 'TimingSimpleCPU'
 ]
 d4 = ['LocalBP', 'TournamentBP', 'BiModeBP', 'TAGE', 'LTAGE']
 
-for a in range(2):
+for a in range(4):
   savedir = 'd2x%d' % (a)
   print(savedir, 'start')
   subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
