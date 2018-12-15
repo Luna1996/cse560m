@@ -8,21 +8,6 @@ d3 = [
 ]
 d4 = ['LocalBP', 'TournamentBP', 'BiModeBP', 'TAGE', 'LTAGE']
 
-for a in range(4):
-  savedir = 'd1x%d' % (a)
-  print(savedir, 'start')
-  subprocess.check_call(['/project/linuxlab/gem5/gem5/build/ARM/gem5.opt',\
-  '--outdir=%s'%(savedir),\
-  'hw4config.py',\
-  '--l1d_size=%s'%(d1[a]),\
-  '--l1i_size=%s'%(d1[a]),\
-  '--pipeline_width=8',\
-  '--cpu-type=DerivO3CPU',\
-  '--bp-type=LTAGE',\
-  '--caches','--l2cache',\
-  '--cmd=/project/linuxlab/gem5/test_progs/dibs/opt_to_tiff'])
-  print(savedir, 'done')
-
 for a in range(2):
   savedir = 'd2x%d' % (a)
   print(savedir, 'start')
